@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net8.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <PackageId>Oryksa</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>ORYKSA AI Employees</Authors>
+    <Company>W8 Atlantic Unipessoal Lda</Company>
+    <Description>Official .NET SDK for ORYKSA AI Employees: in-app client with short-lived session tokens, server client (chat, sessions, Brain) and webhook verification for desktop, server and mobile .NET apps.</Description>
+    <PackageTags>oryksa;ai;chatbot;customer-support;sdk</PackageTags>
+    <PackageProjectUrl>https://developer.oryksa.com/en/sdks</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/oryksa/oryksa-dotnet</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+</Project>
