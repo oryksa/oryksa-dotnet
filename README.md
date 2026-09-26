@@ -66,6 +66,15 @@ SDK oficial .NET da **ORYKSA AI Employees** para apps desktop Windows e Linux e 
 
 SDK oficial de .NET de **ORYKSA AI Employees** para apps de escritorio Windows y Linux y servidores. Tu servidor crea el token de sesión con `OryksaServer.CreateSessionAsync` y la app usa `OryksaClient(getToken: ...)`. Cada respuesta de la IA cuenta como una interacción de tu plan.
 
+## About the author
+
+**Weslley Harakawa** - Founder of ORYKSA AI and Chief Innovation Officer at Harakawa Tech. Based in Lisbon, Portugal. Specialties: artificial intelligence, web and mobile development, blockchain tokenization. Education: University of the People.
+
+- Website: https://harakawa.tech
+- LinkedIn: https://www.linkedin.com/in/weslleyharakawa/
+- Instagram: https://www.instagram.com/weslley.harakawa
+- ORYKSA AI Employees: https://oryksa.com (X: https://x.com/oryksa, Instagram: https://www.instagram.com/oryksaai, YouTube: https://www.youtube.com/@ORYKSAAI)
+
 ---
 
 MIT License · ORYKSA AI Employees · W8 Atlantic Unipessoal Lda
