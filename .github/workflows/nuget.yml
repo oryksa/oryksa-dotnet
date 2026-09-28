@@ -1,0 +1,47 @@
+name: NuGet
+
+# Publishes the Oryksa package to nuget.org with Trusted Publishing (GitHub OIDC -> short-lived NuGet API key,
+# no long-lived key stored anywhere). Runs on a version tag (e.g. v1.1.0) or by hand (Actions > NuGet > Run workflow)
+# for the <Version> in src/Oryksa/Oryksa.csproj.
+# Needs: a Trusted Publishing policy on nuget.org (owner oryksa, repository oryksa-dotnet, workflow file nuget.yml)
+# and the repository variable NUGET_USER = the nuget.org profile name (not the email; not a secret).
+on:
+  push:
+    tags: ['v[0-9]+.[0-9]+.[0-9]+']
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write   # GitHub OIDC token for nuget.org Trusted Publishing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with: { dotnet-version: '8.0.x' }
+
+      - name: Tag and package version match
+        if: github.ref_type == 'tag'
+        run: |
+          v=$(sed -n 's:.*<Version>\(.*\)</Version>.*:\1:p' src/Oryksa/Oryksa.csproj)
+          echo "package $v, tag $GITHUB_REF_NAME"
+          test "v$v" = "$GITHUB_REF_NAME"
+
+      - name: NuGet user set
+        run: test -n "${{ vars.NUGET_USER }}" || { echo "Repository variable NUGET_USER is missing"; exit 1; }
+
+      - name: Test and pack
+        run: |
+          dotnet test tests/Oryksa.Tests -c Release
+          dotnet pack src/Oryksa -c Release -o out
+
+      # Short-lived API key (valid 1 hour), requested right before the push
+      - name: NuGet login (OIDC -> temporary API key)
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: ${{ vars.NUGET_USER }}
+
+      - name: NuGet push
+        run: dotnet nuget push "out/*.nupkg" --api-key ${{ steps.login.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
