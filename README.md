@@ -8,6 +8,29 @@ Official .NET SDK for **ORYKSA AI Employees**, for Windows and Linux desktop app
 * API: `https://api.oryksa.com/v1`
 * netstandard2.0 and net8.0, no dependencies on .NET 8.
 
+**Read in:** English (this page), or open your language:
+
+<details>
+<summary><b>Português (Portugal)</b></summary>
+
+SDK oficial .NET da **ORYKSA AI Employees** para apps desktop Windows e Linux e servidores. O teu servidor cria o token de sessão com `OryksaServer.CreateSessionAsync` e a app usa `OryksaClient(getToken: ...)`. Cada resposta da IA conta como uma interação do teu plano.
+
+</details>
+
+<details>
+<summary><b>Português (Brasil)</b></summary>
+
+SDK oficial .NET da **ORYKSA AI Employees** para apps desktop Windows e Linux e servidores. Seu servidor cria o token de sessão com `OryksaServer.CreateSessionAsync` e o app usa `OryksaClient(getToken: ...)`. Cada resposta da IA conta como uma interação do seu plano.
+
+</details>
+
+<details>
+<summary><b>Español</b></summary>
+
+SDK oficial de .NET de **ORYKSA AI Employees** para apps de escritorio Windows y Linux y servidores. Tu servidor crea el token de sesión con `OryksaServer.CreateSessionAsync` y la app usa `OryksaClient(getToken: ...)`. Cada respuesta de la IA cuenta como una interacción de tu plan.
+
+</details>
+
 ## Install
 
 ```bash
@@ -53,18 +76,6 @@ var evt = OryksaWebhook.Verify(rawBody, Request.Headers["ORYKSA-Signature"], web
 Failed calls throw `OryksaException` with `Status`, `Code` (for example `interaction_limit_reached`, `rate_limited`, `plan_required`) and `Message`.
 
 ---
-
-## Português (Portugal)
-
-SDK oficial .NET da **ORYKSA AI Employees** para apps desktop Windows e Linux e servidores. O teu servidor cria o token de sessão com `OryksaServer.CreateSessionAsync` e a app usa `OryksaClient(getToken: ...)`. Cada resposta da IA conta como uma interação do teu plano.
-
-## Português (Brasil)
-
-SDK oficial .NET da **ORYKSA AI Employees** para apps desktop Windows e Linux e servidores. Seu servidor cria o token de sessão com `OryksaServer.CreateSessionAsync` e o app usa `OryksaClient(getToken: ...)`. Cada resposta da IA conta como uma interação do seu plano.
-
-## Español
-
-SDK oficial de .NET de **ORYKSA AI Employees** para apps de escritorio Windows y Linux y servidores. Tu servidor crea el token de sesión con `OryksaServer.CreateSessionAsync` y la app usa `OryksaClient(getToken: ...)`. Cada respuesta de la IA cuenta como una interacción de tu plan.
 
 ## About the author
 
