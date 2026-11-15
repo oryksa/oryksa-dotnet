@@ -11,16 +11,9 @@ Official .NET SDK for **ORYKSA AI Employees**, for Windows and Linux desktop app
 **Read in:** English (this page), or open your language:
 
 <details>
-<summary><b>Português (Portugal)</b></summary>
+<summary><b>Português</b></summary>
 
 SDK oficial .NET da **ORYKSA AI Employees** para apps desktop Windows e Linux e servidores. O teu servidor cria o token de sessão com `OryksaServer.CreateSessionAsync` e a app usa `OryksaClient(getToken: ...)`. Cada resposta da IA conta como uma interação do teu plano.
-
-</details>
-
-<details>
-<summary><b>Português (Brasil)</b></summary>
-
-SDK oficial .NET da **ORYKSA AI Employees** para apps desktop Windows e Linux e servidores. Seu servidor cria o token de sessão com `OryksaServer.CreateSessionAsync` e o app usa `OryksaClient(getToken: ...)`. Cada resposta da IA conta como uma interação do seu plano.
 
 </details>
 
