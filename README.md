@@ -2,27 +2,13 @@
 
 # Oryksa for .NET
 
+[![English](https://img.shields.io/badge/English-0891b2?style=for-the-badge)](README.md) [![Português](https://img.shields.io/badge/Portugu%C3%AAs-30363d?style=for-the-badge)](README.pt.md) [![Español](https://img.shields.io/badge/Espa%C3%B1ol-30363d?style=for-the-badge)](README.es.md) [![Français](https://img.shields.io/badge/Fran%C3%A7ais-30363d?style=for-the-badge)](README.fr.md)
+
 Official .NET SDK for **ORYKSA AI Employees**, for Windows and Linux desktop apps (WPF, WinUI, Avalonia, MAUI), servers (ASP.NET) and workers. The same AI employee that answers your customers on WhatsApp and on your website, inside your app.
 
 * Docs: https://developer.oryksa.com/en/sdks
 * API: `https://api.oryksa.com/v1`
 * netstandard2.0 and net8.0, no dependencies on .NET 8.
-
-**Read in:** English (this page), or open your language:
-
-<details>
-<summary><b>Português</b></summary>
-
-SDK oficial .NET da **ORYKSA AI Employees** para apps desktop Windows e Linux e servidores. O teu servidor cria o token de sessão com `OryksaServer.CreateSessionAsync` e a app usa `OryksaClient(getToken: ...)`. Cada resposta da IA conta como uma interação do teu plano.
-
-</details>
-
-<details>
-<summary><b>Español</b></summary>
-
-SDK oficial de .NET de **ORYKSA AI Employees** para apps de escritorio Windows y Linux y servidores. Tu servidor crea el token de sesión con `OryksaServer.CreateSessionAsync` y la app usa `OryksaClient(getToken: ...)`. Cada respuesta de la IA cuenta como una interacción de tu plan.
-
-</details>
 
 ## Install
 
